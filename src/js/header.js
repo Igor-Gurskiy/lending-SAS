@@ -3,7 +3,6 @@ import { setLanguage } from "../locales/index.js";
 export function initHeader() {
   initLanguageSelector();
   initMenu();
-  // initBuySlider();
 }
 
 function initLanguageSelector() {
@@ -65,7 +64,6 @@ function initLanguageSelector() {
 function initMenu() {
   const menuToggle = document.querySelector(".header__menu-toggle");
   const nav = document.querySelector(".header__nav");
-  const navLink = document.querySelectorAll(".header__nav a");
 
   if (menuToggle && nav) {
     menuToggle.addEventListener("click", () => {
@@ -75,9 +73,8 @@ function initMenu() {
   }
 
   nav.addEventListener("click", (e) => {
-    console.log(e.target);
     if (
-      e.target.classList.contains("item-link") ||
+      e.target.classList.contains("nav__link") ||
       e.target.classList.contains("social__link")
     ) {
       nav.classList.remove("active");

@@ -54,9 +54,7 @@ function initBuySlider() {
     setTimeout(() => {
       isAnimating = false;
 
-
       if (index === 0) {
-
         setTimeout(() => {
           background.style.transition = "none";
           currentSlide = images.length;
@@ -66,7 +64,6 @@ function initBuySlider() {
           }, 50);
         }, 50);
       } else if (index === totalSlides - 1) {
-
         setTimeout(() => {
           background.style.transition = "none";
           currentSlide = 1;
@@ -125,9 +122,8 @@ function initBuySlider() {
 
     circles.forEach((circle, i) => {
       circle.addEventListener("click", (e) => {
-        e.preventDefault(); 
-      e.stopPropagation(); 
-      console.log("Клик по кружку!", i);
+        e.preventDefault();
+        e.stopPropagation();
         stopAutoPlay();
         goToRealSlide(i);
         startAutoPlay();
@@ -153,5 +149,4 @@ function initBuySlider() {
   }
 
   init();
-
 }

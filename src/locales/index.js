@@ -35,11 +35,7 @@ const updatePageText = () => {
     const key = element.getAttribute("data-i18n");
     const translation = getText(key);
 
-    if (element.hasAttribute("data-i18n-html")) {
       element.innerHTML = translation;
-    } else {
-      element.textContent = translation;
-    }
   });
 };
 
