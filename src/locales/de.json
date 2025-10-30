@@ -1,0 +1,117 @@
+{
+  "languages": {
+    "eng": "ENG",
+    "rus": "RUS", 
+    "deu": "DEU",
+    "fra": "FRA"
+  },
+  "header": {
+    "menu": "MENÜ",
+    "nav": {
+      "main": "Start",
+      "about": "Über",
+      "game_features": "Spielmerkmale",
+      "system_requirements": "Systemanforderungen",
+      "quotes": "Zitate"
+    }
+  },
+  "buy": {
+    "title": "ÜBERLEBE UM JEDEN PREIS",
+    "description": "Erlebe ein neues soziales Battle Royale Spiel",
+    "button": {
+      "text": "Jetzt auf Steam kaufen",
+      "price": "$14.99"
+    },
+    "story": "DIE GESCHICHTE"
+  },
+  "about": {
+    "subtitle": "WAS IST SOS?",
+    "title": "soziales battle royale spiel",
+    "article": {
+      "text1": "Jede Runde kämpfst <b>du</b> und <b>15</b> andere Kandidaten um die Flucht von einer tödlichen Insel voller Monster. Der Haken: Nur <b>drei</b> Personen können überleben. Wirst du alleine handeln oder Freundschaften mit anderen schließen, um zu entkommen?",
+      "text2": "Die richtigen Entscheidungen zu treffen kann den Unterschied zwischen <span class=\"text__highlight\">Leben und Tod</span> bedeuten."
+    }
+  },
+  "special": {
+    "subtitle": "WAS IST SO BESONDERS?",
+    "title": "Merkmale",
+    "features": {
+      "survive": {
+        "title": "ÜBERLEBE UM JEDEN PREIS",
+        "text": "Du hast 30 Minuten Zeit, um ein Relikt zu finden, die Evakuierung zu signalisieren und einen der drei Plätze im Rettungshubschrauber zu ergattern."
+      },
+      "allies": {
+        "title": "VERBÜNDETE UND FEINDE SCHAFFEN",
+        "text": "Du hast 30 Minuten Zeit, um ein Relikt zu finden, die Evakuierung zu signalisieren und einen der drei Plätze im Rettungshubschrauber zu ergattern."
+      },
+      "audience": {
+        "title": "BEEINDRUCKE DAS PUBLIKUM",
+        "text": "Du hast 30 Minuten Zeit, um ein Relikt zu finden, die Evakuierung zu signalisieren und einen der drei Plätze im Rettungshubschrauber zu ergattern."
+      }
+    }
+  },
+  "requirement": {
+    "subtitle": "Kann mein Computer dieses Spiel ausführen?",
+    "title": "systemanforderungen",
+    "os": {
+      "title": "Betriebssystem:",
+      "text": "Nur Windows 7 64-bit (Keine OSX-Unterstützung derzeit)"
+    },
+    "processor": {
+      "title": "Prozessor:",
+      "text": "Intel Core 2 Duo @ 2.4 GHZ oder AMD Athlon X2 @ 2.8GHZ"
+    },
+    "memory": {
+      "title": "Arbeitsspeicher:",
+      "text": "8 GB RAM"
+    },
+    "storage": {
+      "title": "Speicher:",
+      "text": "8 GB verfügbarer Speicherplatz"
+    },
+    "graphics": {
+      "title": "Grafik:",
+      "text": "NVIDIA GeForce GTX 660 2GB oder AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)"
+    }
+  },
+  "press": {
+    "subtitle": "Was denken die Leute?",
+    "title": "Pressestimmen",
+    "article": "Unser Ziel ist es, ein Produkt und einen Service zu schaffen, mit dem Sie zufrieden sind und den Sie jeden Tag nutzen. Deshalb arbeiten wir ständig an unseren Dienstleistungen, um sie jeden Tag zu verbessern und wirklich auf das zu hören, was unsere Nutzer zu sagen haben.",
+    "button": "Weitere Testemonials lesen",
+    "reviews": {
+      "evan": {
+        "name": "Evan Lahti",
+        "position": "PC Gamer",
+        "message": "„Eines meiner Gaming-Highlights des Jahres.“",
+        "date": "18. Oktober 2018"
+      },
+      "jada": {
+        "name": "Jada Griffin",
+        "position": "Nerdreactor",
+        "message": "„Die nächste große Sache in der Welt der Streaming- und Survival-Spiele.“",
+        "date": "21. Dezember 2018"
+      },
+      "aaron": {
+        "name": "Aaron Williams",
+        "position": "Uproxx",
+        "message": "„Snoop Dogg spielt den unglaublich unterhaltsamen 'SOS' - das ist lächerlich.“",
+        "date": "24. Dezember 2018"
+      }
+    }
+  },
+  "intouch": {
+    "subtitle": "Möchten Sie in Kontakt bleiben?",
+    "title": "Newsletter ABONNIEREN",
+    "article": "Um unsere Neuigkeiten zu erhalten, müssen Sie nur Ihre E-Mail-Adresse eingeben. Alles andere erledigen wir für Sie. Wir senden Ihnen E-Mails mit Informationen über das Spiel. Wir spammen nicht.",
+    "label": "Ihre E-Mail-Adresse",
+    "placeholder": "aliciliniavopir@gmail.com",
+    "button": "Jetzt abonnieren"
+  },
+  "footer": {
+    "copyright": "© 2018 Outpost Games, Inc. Alle Rechte vorbehalten",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "conduct": "Verhaltenskodex"
+  }
+}

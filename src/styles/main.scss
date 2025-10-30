@@ -1,0 +1,41 @@
+// Base
+@use "base" as *;
+
+// Components
+@use "components/header";
+@use "components/buy";
+@use "components/about";
+@use "components/special";
+@use "components/requirement";
+@use "components/press";
+@use "components/intouch";
+@use "components/footer";
+
+// Global styles
+html {
+  font-size: 14px;
+  line-height: 1.5;
+
+  @include respond-to($breakpoints, "tablet") {
+    font-size: 16px;
+  }
+
+  @include respond-to($breakpoints, "desktop") {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-family: $font-primary, sans-serif;
+  color: $color-white;
+  background-color: black;
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  color: currentColor;
+}

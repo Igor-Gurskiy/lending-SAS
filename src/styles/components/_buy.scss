@@ -1,0 +1,340 @@
+@use "../base" as *;
+
+.buy {
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+
+  &__background {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    transition: transform 1s ease-in-out;
+    will-change: transform;
+
+    & .bg__image {
+      width: 100%;
+      height: 100vh;
+      flex-shrink: 0;
+      z-index: -5;
+      backface-visibility: hidden;
+      transform-origin: center center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: radial-gradient(
+          189.96% 61.18% at 50% 38.82%,
+          rgba(255, 181, 72, 0) 0%,
+          rgba(52, 44, 29, 0.80319) 73.22%,
+          #08090a 99.74%
+        );
+        z-index: 0;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+
+      &.bg-image-2 {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100vh;
+          background: radial-gradient(
+            136.03% 54.57% at 50% 48.04%,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(0, 0, 0, 0) 60.63%,
+            #080a0b 99.74%
+          );
+        }
+      }
+
+      &.bg-image-3 {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100vh;
+          background: radial-gradient(
+            67.45% 50.77% at 21.45% 40.62%,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(4, 5, 6, 0.520671) 25.99%,
+            rgba(6, 7, 8, 0.739601) 65.03%,
+            #080a0b 99.74%
+          );
+          z-index: 1;
+        }
+        & img {
+          position: absolute;
+          width: 100%;
+          height: 90%;
+          object-fit: cover;
+          top: 10%;
+          left: 0;
+        }
+      }
+
+      &.bg-image-4 {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100vh;
+          background: radial-gradient(
+            60.54% 52.14% at 60.49% 60.05%,
+            rgba(255, 255, 255, 0) 3.36%,
+            rgba(0, 0, 0, 0) 46.19%,
+            #080a0b 100%
+          );
+        }
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px 30vh;
+    z-index: 9990;
+
+    @include respond-to($breakpoints, "tablet") {
+      padding: 0 20px 30vh;
+    }
+
+    @include respond-to($breakpoints, "desktop") {
+      padding: 0 25px 30vh;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .header__title {
+      font-family: $font-variable;
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 2rem;
+      color: $color-white;
+      text-align: center;
+      margin-bottom: 8px;
+
+      @include respond-to($breakpoints, "tablet") {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    }
+
+    & .header__description {
+      font-family: $font-variable;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.125rem;
+      color: $color-white;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+
+      @include respond-to($breakpoints, "tablet") {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin-bottom: 20px;
+      }
+    }
+
+    & .header__button {
+      background-color: $color-yellow;
+      font-family: $font-primary;
+      font-size: 0.875rem;
+      text-align: center;
+      min-height: 40px;
+      min-width: 200px;
+      font-weight: 600;
+      color: $color-black;
+      border-radius: 4px;
+
+      @include respond-to($breakpoints, "tablet") {
+        min-width: 300px;
+        min-height: 50px;
+        font-size: 1.2rem;
+      }
+
+      & .button__text {
+        position: relative;
+        margin-right: 16px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 16px;
+          right: -10px;
+          background-color: $color-black;
+          opacity: 0.5;
+
+          @include respond-to($breakpoints, "tablet") {
+            height: 20px;
+            width: 2px;
+          }
+
+          @include respond-to($breakpoints, "desktop") {
+            height: 24px;
+          }
+        }
+      }
+
+      &:hover {
+        background-color: $color-white;
+      }
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding: 0 15px 24px;
+    bottom: 24px;
+    left: 0;
+
+    @include respond-to($breakpoints, "tablet") {
+      padding: 0 20px 24px;
+    }
+
+    @include respond-to($breakpoints, "desktop") {
+      padding: 0 25px 24px;
+    }
+
+    & .footer__link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: $font-primary;
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: $color-white;
+      position: relative;
+
+      @include respond-to($breakpoints, "tablet") {
+        font-size: 1.2rem;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        @include icon("triengle");
+        background-color: $color-white;
+
+        @include respond-to($breakpoints, "tablet") {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    & .footer__nav {
+      display: flex;
+      gap: 10px;
+
+      & .nav__circle {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid $color-white;
+        position: relative;
+        cursor: pointer;
+
+        @include respond-to($breakpoints, "tablet") {
+          width: 16px;
+          height: 16px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $color-white;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+
+          @include respond-to($breakpoints, "tablet") {
+            width: 10px;
+            height: 10px;
+          }
+        }
+
+        &.active {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+
+      & .nav__arrow {
+        display: block;
+        opacity: 1;
+        cursor: pointer;
+        width: 44px;
+        height: 12px;
+
+        @include respond-to($breakpoints, "tablet") {
+          width: 60px;
+          height: 16px;
+        }
+
+        & img {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+
+        &.hidden {
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        &:nth-of-type(1) {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

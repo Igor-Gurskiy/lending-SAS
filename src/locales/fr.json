@@ -1,0 +1,117 @@
+{
+  "languages": {
+    "eng": "ANG",
+    "rus": "RUS",
+    "deu": "ALL",
+    "fra": "FRA"
+  },
+  "header": {
+    "menu": "MENU",
+    "nav": {
+      "main": "Accueil",
+      "about": "À propos",
+      "game_features": "Fonctionnalités",
+      "system_requirements": "Configuration",
+      "quotes": "Citations"
+    }
+  },
+  "buy": {
+    "title": "SURVIVEZ À TOUT PRIX",
+    "description": "Découvrez un nouveau jeu de battle royale social",
+    "button": {
+      "text": "Acheter sur Steam",
+      "price": "$14.99"
+    },
+    "story": "L'HISTOIRE"
+  },
+  "about": {
+    "subtitle": "QU'EST-CE QUE SOS?",
+    "title": "jeu de battle royale social",
+    "article": {
+      "text1": "Chaque round, <b>vous</b> et <b>15</b> autres concurrents luttez pour échapper à une île mortelle remplie de monstres. Le piège : seulement <b>trois</b> personnes peuvent survivre. Allez-vous agir seul ou former des alliances avec d'autres pour vous échapper ?",
+      "text2": "Prendre les bonnes décisions peut faire la différence entre <span class=\"text__highlight\">la vie et la mort.</span>"
+    }
+  },
+  "special": {
+    "subtitle": "QU'Y A-T-IL DE SI SPÉCIAL?",
+    "title": "Fonctionnalités",
+    "features": {
+      "survive": {
+        "title": "SURVIVEZ À TOUT PRIX",
+        "text": "Vous avez 30 minutes pour trouver une relique, signaler l'extraction et obtenir l'une des trois places sur l'hélicoptère de sauvetage."
+      },
+      "allies": {
+        "title": "CRÉEZ DES ALLIÉS ET DES ENNEMIS",
+        "text": "Vous avez 30 minutes pour trouver une relique, signaler l'extraction et obtenir l'une des trois places sur l'hélicoptère de sauvetage."
+      },
+      "audience": {
+        "title": "IMPRESSIONNEZ LE PUBLIC",
+        "text": "Vous avez 30 minutes pour trouver une relique, signaler l'extraction et obtenir l'une des trois places sur l'hélicoptère de sauvetage."
+      }
+    }
+  },
+  "requirement": {
+    "subtitle": "Mon ordinateur peut-il exécuter ce jeu?",
+    "title": "configuration système",
+    "os": {
+      "title": "OS:",
+      "text": "Windows 7 64-bit uniquement (Pas de support OSX pour le moment)"
+    },
+    "processor": {
+      "title": "Processeur:",
+      "text": "Intel Core 2 Duo @ 2.4 GHZ ou AMD Athlon X2 @ 2.8GHZ"
+    },
+    "memory": {
+      "title": "Mémoire:",
+      "text": "8 GB RAM"
+    },
+    "storage": {
+      "title": "Stockage:",
+      "text": "8 GB d'espace disponible"
+    },
+    "graphics": {
+      "title": "Graphiques:",
+      "text": "NVIDIA GeForce GTX 660 2GB ou AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)"
+    }
+  },
+  "press": {
+    "subtitle": "Que pensent les gens?",
+    "title": "Citations presse",
+    "article": "Notre objectif est de créer un produit et un service qui vous satisfont et que vous utilisez tous les jours. C'est pourquoi nous travaillons constamment à améliorer nos services chaque jour et à vraiment écouter ce que nos utilisateurs ont à dire.",
+    "button": "Lire plus de témoignages",
+    "reviews": {
+      "evan": {
+        "name": "Evan Lahti",
+        "position": "PC Gamer",
+        "message": "« L'un de mes moments forts du gaming cette année. »",
+        "date": "18 octobre 2018"
+      },
+      "jada": {
+        "name": "Jada Griffin",
+        "position": "Nerdreactor",
+        "message": "« La prochaine grande chose dans le monde du streaming et des jeux de survie. »",
+        "date": "21 décembre 2018"
+      },
+      "aaron": {
+        "name": "Aaron Williams",
+        "position": "Uproxx",
+        "message": "« Snoop Dogg qui joue au 'SOS' incroyablement divertissant, c'est ridicule. »",
+        "date": "24 décembre 2018"
+      }
+    }
+  },
+  "intouch": {
+    "subtitle": "Vous voulez rester en contact?",
+    "title": "newsletter S'ABONNER",
+    "article": "Pour commencer à recevoir nos actualités, il vous suffit de saisir votre adresse e-mail. Nous nous occupons du reste. Nous vous enverrons des e-mails contenant des informations sur le jeu. Nous ne spammons pas.",
+    "label": "Votre adresse e-mail",
+    "placeholder": "aliciliniavopir@gmail.com",
+    "button": "S'abonner maintenant"
+  },
+  "footer": {
+    "copyright": "© 2018 Outpost Games, Inc. Tous droits réservés",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "conduct": "Code de conduite"
+  }
+}

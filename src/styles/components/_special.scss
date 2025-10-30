@@ -1,0 +1,250 @@
+@use "../base" as *;
+
+.special {
+  padding: 70px 0 50px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  overflow: hidden;
+  // background: radial-gradient(
+  //   127.45% 54.77% at 21.45% 40.62%,
+  //   rgba(255, 255, 255, 0) 0%,
+  //   rgba(4, 5, 6, 0.520671) 25.99%,
+  //   rgba(6, 7, 8, 0.739601) 85.03%,
+  //   #080a0b 99.74%
+  // );
+  position: relative;
+
+    &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  background: radial-gradient(
+    127.45% 54.77% at 21.45% 40.62%,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(4, 5, 6, 0.520671) 25.99%,
+    rgba(6, 7, 8, 0.739601) 85.03%,
+    #080a0b 99.74%
+  );
+    z-index: 1;
+  }
+
+  @include respond-to($breakpoints, "tablet") {
+  }
+
+  @include respond-to($breakpoints, "desktop") {
+  }
+
+  & .bg__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 10vh 2vh 0 0;
+    max-width: 190px;
+    z-index: 2;
+
+    @include respond-to($breakpoints, "tablet") {
+      margin: 15vh 5vw 0 0;
+      max-width: 350px;
+    }
+
+    @include respond-to($breakpoints, "desktop") {
+      margin: 10vh 20vw 0 0;
+    }
+
+    & .body__subtitle {
+      font-family: $font-variable;
+      font-weight: 600;
+      font-size: 1rem;
+      color: $color-white;
+      text-transform: uppercase;
+      white-space: nowrap;
+      margin-bottom: 8px;
+
+      @include respond-to($breakpoints, "tablet") {
+        font-size: 1.2rem;
+      }
+
+      @include respond-to($breakpoints, "desktop") {
+      }
+    }
+
+    & .body__title {
+      display: block;
+      position: relative;
+      font-family: $font-variable;
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      color: $color-white;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+
+      @include respond-to($breakpoints, "tablet") {
+        font-size: 2rem;
+      }
+
+      @include respond-to($breakpoints, "desktop") {
+      }
+    }
+
+    .body__text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+
+      & .text__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &.active {
+          grid-template-rows: auto 1fr;
+          &::after {
+            opacity: 1;
+            transform: scaleY(1);
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 15px;
+          left: -13px;
+          width: 1px;
+          background-color: $color-white;
+          z-index: 1;
+          opacity: 0;
+          transition: all 0.6s ease-in-out;
+          transform-origin: top;
+          transform: scaleY(0);
+
+          @include respond-to($breakpoints, "tablet") {
+            top: 27px;
+            left: -27px;
+          }
+
+          @include respond-to($breakpoints, "desktop") {
+          }
+        }
+
+        &:not(:last-child)::after {
+          height: calc(100% + 5px);
+
+          @include respond-to($breakpoints, "tablet") {
+            height: calc(100% + 2px);
+          }
+
+          @include respond-to($breakpoints, "desktop") {
+          }
+        }
+        &:last-child::after {
+          height: calc(100% - 15px);
+
+          @include respond-to($breakpoints, "tablet") {
+            height: calc(100% - 25px);
+          }
+
+          @include respond-to($breakpoints, "desktop") {
+          }
+        }
+
+        & .item__circle {
+          position: absolute;
+          display: block;
+          top: 3px;
+          left: -10%;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          border: 1px solid $color-white;
+          transition: all 0.3s ease-in-out;
+
+          @include respond-to($breakpoints, "tablet") {
+            width: 16px;
+            height: 16px;
+            top: 12px;
+          }
+
+          @include respond-to($breakpoints, "desktop") {
+            top: 12px;
+          }
+
+          &.active {
+            background-color: $color-white;
+          }
+        }
+
+        & .item__title {
+          font-size: 1rem;
+          font-family: $font-variable;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: $color-yellow;
+          text-align: start;
+          cursor: pointer;
+          position: relative;
+
+          @include respond-to($breakpoints, "tablet") {
+            font-size: 1.5rem;
+          }
+
+          @include respond-to($breakpoints, "desktop") {
+          }
+        }
+
+        & .item__text {
+          font-size: 0.875rem;
+          font-family: $font-primary;
+          color: $color-white;
+          text-align: start;
+          padding-top: 0;
+          opacity: 0;
+          overflow: hidden;
+          max-height: 0;
+          transform: translateY(-120%);
+          transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out 0.15s,
+            max-height 0.3s ease-in-out 0.15s,
+            padding-top 0.3s ease-in-out 0.15s;
+
+          @include respond-to($breakpoints, "tablet") {
+            font-size: 1.2rem;
+          }
+
+          @include respond-to($breakpoints, "desktop") {
+          }
+
+          &.active {
+            padding-top: 1rem;
+            opacity: 1;
+            transform: translateY(0);
+            max-height: 1000px;
+            transition: opacity 0.3s ease-in-out 0.15s,
+              transform 0.3s ease-in-out, max-height 0.3s ease-in-out,
+              padding-top 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

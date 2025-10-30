@@ -1,0 +1,21 @@
+// Colors
+$color-yellow: #ffb548;
+$color-white: #ffffff;
+$color-black: #1a1917;
+$color-red: #ff1313;
+$color-gray: #979797;
+$color-blue: #1877f2;
+$color-blue-light: #1da1f2;
+$color-purple: #9146ff;
+
+// Typography
+$font-primary: 'OpenSans';
+$font-variable: 'BebasNeue';
+
+
+// Breakpoints
+$breakpoints: (
+  'mobile': 320px,
+  'tablet': 768px,
+  'desktop': 1024px
+);

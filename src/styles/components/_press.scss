@@ -1,0 +1,308 @@
+@use "../base" as *;
+
+.press {
+  padding: 70px 20px 50px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background: radial-gradient(
+    21.54% 18.14% at 50.49% 75.05%,
+    rgba(255, 255, 255, 0) 3.36%,
+    rgba(0, 0, 0, 0) 46.19%,
+    #080a0b 100%
+  );
+  position: relative;
+
+  @include respond-to($breakpoints, "tablet") {
+    height: 100vh;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+  }
+
+  & .bg__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.5;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+
+    @include respond-to($breakpoints, "tablet") {
+      flex-direction: row;
+      gap: 50px;
+      margin: auto;
+      align-items: center;
+    }
+
+    @include respond-to($breakpoints, "desktop") {
+      gap: 70px;
+      justify-content: center;
+    }
+
+    & .body__title__conteiner {
+      display: flex;
+      flex-direction: column;
+
+      @include respond-to($breakpoints, "tablet") {
+        max-width: 300px;
+      }
+
+      @include respond-to($breakpoints, "desktop") {
+        max-width: 500px;
+        padding-inline-start: 40px;
+      }
+
+      & .body__subtitle {
+        font-family: $font-variable;
+        font-weight: 600;
+        font-size: 1rem;
+        color: $color-white;
+        text-transform: uppercase;
+        white-space: nowrap;
+        margin-bottom: 8px;
+
+        @include respond-to($breakpoints, "tablet") {
+          font-size: 1.2rem;
+        }
+      }
+
+      & .body__title {
+        display: block;
+        position: relative;
+        font-family: $font-variable;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2rem;
+        color: $color-white;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+
+        @include respond-to($breakpoints, "tablet") {
+          font-size: 2.2rem;
+        }
+      }
+
+      & .body__article {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: 0.875rem;
+        color: $color-white;
+        z-index: 1;
+
+        @include respond-to($breakpoints, "tablet") {
+          font-size: 1rem;
+        }
+
+        & .article__text {
+        }
+      }
+
+      & .body__button {
+        background-color: $color-yellow;
+        font-family: $font-primary;
+        font-size: 0.875rem;
+        text-align: center;
+        padding: 16px 24px;
+        font-weight: 600;
+        color: $color-black;
+        border-radius: 0.25rem;
+        margin: 0 auto 24px;
+
+        @include respond-to($breakpoints, "tablet") {
+          font-size: 1rem;
+          align-self: start;
+          margin: 0 0 24px;
+        }
+
+        &:hover {
+          background-color: $color-white;
+        }
+      }
+    }
+
+    & .body__reviews__conteiner {
+      flex-grow: 1;
+      max-width: 900px;
+
+      @include respond-to($breakpoints, "tablet") {
+      }
+
+      @include respond-to($breakpoints, "desktop") {
+        padding-inline-end: 40px;
+      }
+
+      & .body__reviews {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+
+        @include respond-to($breakpoints, "tablet") {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          grid-auto-rows: min-content;
+          gap: 16px;
+        }
+
+        @include respond-to($breakpoints, "desktop") {
+        }
+
+        & .user {
+          list-style: none;
+          background: rgba(255, 255, 255, 0.08);
+          border-radius: 0.5rem;
+          padding: 10px 16px 16px;
+          display: grid;
+          grid-template-columns: min-content auto;
+          gap: 16px;
+          position: relative;
+          width: 100%;
+          max-width: 400px;
+
+          @include respond-to($breakpoints, "tablet") {
+            &:nth-child(even) {
+              grid-column: 1 / 6;
+            }
+
+            &:nth-child(odd) {
+              grid-column: 2 / 7;
+            }
+          }
+
+          @include respond-to($breakpoints, "desktop") {
+          max-width: 500px;
+          }
+
+          &__avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: auto;
+
+            @include respond-to($breakpoints, "tablet") {
+              width: 45px;
+              height: 45px;
+            }
+
+            @include respond-to($breakpoints, "desktop") {
+            }
+          }
+
+          &__info {
+            display: flex;
+            flex-direction: column;
+
+            & .user__name {
+              font-family: $font-variable;
+              font-size: 1.3rem;
+              color: $color-yellow;
+
+              @include respond-to($breakpoints, "tablet") {
+                font-size: 1.5rem;
+              }
+
+              @include respond-to($breakpoints, "desktop") {
+              }
+            }
+
+            & .user__position {
+              font-family: $font-primary;
+              font-weight: 400;
+              font-size: 0.875rem;
+              color: $color-white;
+              opacity: 0.5;
+
+              @include respond-to($breakpoints, "tablet") {
+                font-size: 1rem;
+              }
+
+              @include respond-to($breakpoints, "desktop") {
+              }
+            }
+          }
+
+          &__message {
+            font-family: $font-primary;
+            font-weight: 400;
+            font-size: 0.875rem;
+            color: $color-white;
+            grid-column: span 2;
+            margin-bottom: 35px;
+
+            @include respond-to($breakpoints, "tablet") {
+              font-size: 1rem;
+            }
+
+            @include respond-to($breakpoints, "desktop") {
+            }
+          }
+
+          & .date {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            font-family: $font-primary;
+            font-weight: 400;
+            font-size: 0.75rem;
+            color: $color-white;
+            opacity: 0.5;
+
+            @include respond-to($breakpoints, "tablet") {
+              font-size: 0.9rem;
+            }
+
+            @include respond-to($breakpoints, "desktop") {
+            }
+          }
+
+          & .twitter {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            height: 14px;
+            width: 18px;
+            background-color: $color-gray;
+            @include icon("twitter");
+
+            @include respond-to($breakpoints, "tablet") {
+              height: 18px;
+              width: 22px;
+            }
+
+            @include respond-to($breakpoints, "desktop") {
+            }
+          }
+        }
+      }
+    }
+  }
+}

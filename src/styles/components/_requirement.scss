@@ -1,0 +1,164 @@
+@use "../base" as *;
+
+.requirement {
+  padding: 70px 20px 50px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  background: radial-gradient(
+    21.54% 18.14% at 50.49% 75.05%,
+    rgba(255, 255, 255, 0) 3.36%,
+    rgba(0, 0, 0, 0) 46.19%,
+    #080a0b 100%
+  );
+  position: relative;
+
+  @include respond-to($breakpoints, "tablet") {
+    // padding: 10vh 0 0 0 ;
+  }
+
+  @include respond-to($breakpoints, "desktop") {
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+  }
+
+  & .bg__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.5;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .body__subtitle {
+      font-family: $font-variable;
+      font-weight: 600;
+      font-size: 1rem;
+      color: $color-white;
+      text-transform: uppercase;
+      white-space: nowrap;
+      margin-bottom: 8px;
+
+      @include respond-to($breakpoints, "tablet") {
+        font-size: 1.2rem;
+      }
+    }
+
+    & .body__title {
+      display: block;
+      position: relative;
+      font-family: $font-variable;
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      color: $color-white;
+      text-transform: uppercase;
+      margin-bottom: 44px;
+
+      @include respond-to($breakpoints, "tablet") {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+
+      @include respond-to($breakpoints, "desktop") {
+      }
+    }
+
+    & .body__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      position: relative;
+      align-self: start;
+      max-width: 600px;
+
+      @include respond-to($breakpoints, "tablet") {
+        max-width: 70%;
+        align-self: start;
+        margin-top: 5vh;
+      }
+
+      @include respond-to($breakpoints, "desktop") {
+        max-width: 55%;
+        margin-left: 3vw;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -16px;
+        right: 0;
+        width: 100%;
+        height: 40px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 30' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L0,30 M0,30 L50,30 L60,14 L100,14 L110,30 M110,30 L290,30 M290,30 L300,30 L340,30 M340,30 L350,30 L384,30 L400,14 L400,0' stroke='rgb(128,128,128)' stroke-width='1.5' fill='none' /%3E%3C/svg%3E");
+        background-size: 100% 100%;
+      }
+
+      & .grid__item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: relative;
+        padding: 10px;
+        border-right: 1px solid $color-gray;
+        border-top: 1px solid $color-gray;
+
+        &:nth-child(2n + 1) {
+          border-left: 1px solid $color-gray;
+        }
+        &.graphics {
+          grid-column: span 2;
+          border-bottom: none;
+          margin-bottom: 24px;
+        }
+
+        & .item__title {
+          font-family: $font-variable;
+          font-weight: 600;
+          font-size: 1.125rem;
+          color: $color-yellow;
+
+          @include respond-to($breakpoints, "tablet") {
+            font-size: 1.5rem;
+          }
+        }
+
+        & .item__text {
+          font-family: $font-primary;
+          font-weight: 400;
+          font-size: 0.875rem;
+          color: $color-white;
+
+          @include respond-to($breakpoints, "tablet") {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

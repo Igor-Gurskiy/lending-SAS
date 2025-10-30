@@ -1,0 +1,15 @@
+// Media queries
+@mixin respond-to($breakpoints-map, $breakpoint) {
+  @if map-has-key($breakpoints-map, $breakpoint) {
+    @media (min-width: map-get($breakpoints-map, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+// Icon mixin
+@mixin icon($name) {
+  mask: url('../../assets/images/#{$name}.svg') no-repeat center;
+  mask-size: contain;
+}
+

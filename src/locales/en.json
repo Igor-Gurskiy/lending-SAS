@@ -1,0 +1,117 @@
+{
+  "languages": {
+    "eng": "ENG",
+    "rus": "RUS",
+    "deu": "DEU",
+    "fra": "FRA"
+  },
+  "header": {
+    "menu": "MENU",
+    "nav": {
+      "main": "Main",
+      "about": "About",
+      "game_features": "Game Features",
+      "system_requirements": "System Requirements",
+      "quotes": "Quotes"
+    }
+  },
+  "buy": {
+    "title": "SURVIVE AT ALL COSTS",
+    "description": "Experience new social battle royale game",
+    "button": {
+      "text": "Buy Now on Steam",
+      "price": "$14.99"
+    },
+    "story": "THE STORY"
+  },
+  "about": {
+    "subtitle": "WHAT IS SOS?",
+    "title": "social battle royale game",
+    "article": {
+      "text1": "Each round, <b>you</b> and <b>15</b> other contestants compete to escape a deadly island filled with monsters. The trick is: <b>three</b> people can survive. Will you run solo or form friendships with others to escape?",
+      "text2": "Making the right decisions could be the difference between <span class=\"text__highlight\">life and death.</span>"
+    }
+  },
+  "special": {
+    "subtitle": "WHAT'S SO SPECIAL?",
+    "title": "Features",
+    "features": {
+      "survive": {
+        "title": "SURVIVE AT ALL COSTS",
+        "text": "You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue chopper."
+      },
+      "allies": {
+        "title": "CREATE ALLIES AND ENEMIES",
+        "text": "You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue chopper."
+      },
+      "audience": {
+        "title": "IMPRESS THE AUDIENCE",
+        "text": "You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue chopper."
+      }
+    }
+  },
+  "requirement": {
+    "subtitle": "Can My Computer Run this game?",
+    "title": "system requirements",
+    "os": {
+      "title": "OS:",
+      "text": "Windows 7 64-bit only (No OSX support at this time)"
+    },
+    "processor": {
+      "title": "Processor:",
+      "text": "Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8GHZ"
+    },
+    "memory": {
+      "title": "Memory:",
+      "text": "8 GB RAM"
+    },
+    "storage": {
+      "title": "Storage:",
+      "text": "8 GB available space"
+    },
+    "graphics": {
+      "title": "Graphics:",
+      "text": "NVIDIA GeForce GTX 660 2GB or AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)"
+    }
+  },
+  "press": {
+    "subtitle": "What people think?",
+    "title": "Press quotes",
+    "article": "Our goal is to create a product and service that you're satisfied with and use it every day. This is why we're constantly working on our services to make it better every day and really listen to what our users has to say.",
+    "button": "Read more testemonials",
+    "reviews": {
+      "evan": {
+        "name": "Evan Lahti",
+        "position": "PC Gamer",
+        "message": "“One of my gaming highlights of the year.”",
+        "date": "October 18, 2018"
+      },
+      "jada": {
+        "name": "Jada Griffin",
+        "position": "Nerdreactor",
+        "message": "“The next big thing in the world of streaming and survival games.”",
+        "date": "December 21, 2018"
+      },
+      "aaron": {
+        "name": "Aaron Williams",
+        "position": "Uproxx",
+        "message": "“Snoop Dogg Playing The Wildly Entertaining 'SOS' Is Ridiculous.”",
+        "date": "December 24, 2018"
+      }
+    }
+  },
+  "intouch": {
+    "subtitle": "Want to stay in touch?",
+    "title": "newsletter SUBSCRIBE",
+    "article": "In order to start receiving our news, all you have to do is enter your email address. Everything else will be taken care of by us. We will send you emails containing information about game. We don't spam.",
+    "label": "Your email address",
+    "placeholder": "aliciliniavopir@gmail.com",
+    "button": "Subscribe now"
+  },
+  "footer": {
+    "copyright": "© 2018 Outpost Games, Inc. All Rights Reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of services",
+    "conduct": "code of conduct"
+  }
+}

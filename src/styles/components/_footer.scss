@@ -1,0 +1,220 @@
+@use "../base" as *;
+
+.footer {
+  padding: 32px 16px 50px;
+  background: radial-gradient(
+    0% 18.14% at 50.49% 75.05%,
+    rgba(255, 255, 255, 0) 3.36%,
+    rgba(0, 0, 0, 0) 46.19%,
+    #080a0b 100%
+  );
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to($breakpoints, "desktop") {
+    padding: 32px 50px 50px;
+  }
+
+  & .menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    margin-bottom: 40px;
+
+    @include respond-to($breakpoints, "desktop") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    & .body__logo {
+      display: flex;
+      position: relative;
+      width: 50px;
+      height: 50px;
+
+      @include respond-to($breakpoints, "tablet") {
+        width: 54px;
+        height: 54px;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .body__nav {
+      .nav__list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        row-gap: 24px;
+      }
+
+      .list__item {
+        display: inline-block;
+
+        a {
+          display: block;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: $color-white;
+          font-family: $font-primary;
+          font-size: 0.775rem;
+          position: relative;
+
+          @include respond-to($breakpoints, "tablet") {
+            font-size: 1rem;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            display: none;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background: $color-red;
+            opacity: 0;
+          }
+
+          &:hover::before {
+            opacity: 1;
+            display: block;
+          }
+        }
+      }
+    }
+
+    & .body__social {
+      display: flex;
+      gap: 52px;
+
+      & .social__link {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: $color-white;
+
+        @include respond-to($breakpoints, "tablet") {
+          width: 24px;
+          height: 24px;
+        }
+
+        &.facebook {
+          @include icon("facebook");
+        }
+        &.twitter {
+          @include icon("twitter");
+        }
+        &.youtube {
+          @include icon("Vector");
+        }
+        &.twitch {
+          @include icon("twitch");
+        }
+
+        &:hover {
+          &.facebook {
+            background-color: $color-blue;
+          }
+          &.twitter {
+            background-color: $color-blue-light;
+          }
+          &.youtube {
+            background-color: $color-red;
+          }
+          &.twitch {
+            background-color: $color-purple;
+          }
+        }
+      }
+    }
+  }
+
+  & .politic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+
+    @include respond-to($breakpoints, "desktop") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -16px;
+      width: 100%;
+      height: 1px;
+      background-color: $color-gray;
+    }
+
+    & .copyright {
+      font-family: $font-primary;
+      font-size: 0.775rem;
+      color: $color-white;
+      opacity: 0.5;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+
+      @include respond-to($breakpoints, "desktop") {
+        flex-direction: row;
+      }
+
+      & .politic__link {
+        text-decoration: none;
+        font-family: $font-primary;
+        font-size: 1rem;
+        color: $color-white;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $color-yellow;
+        }
+      }
+
+      & .politic__link:nth-child(2) {
+        position: relative;
+
+        &::after,
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 75%;
+          background-color: $color-white;
+        }
+
+        &::before {
+          left: -8px;
+        }
+
+        &::after {
+          right: -8px;
+        }
+      }
+    }
+  }
+}
